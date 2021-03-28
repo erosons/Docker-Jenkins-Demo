@@ -2,7 +2,7 @@ pipeline {
 
   environment {
 
-    registry = "sankethshinde/demoproject"
+    registry = "iskidet/simpliliearnproject"
 
     registryCredential = 'docker-creds'
 
@@ -18,7 +18,7 @@ pipeline {
 
       steps {
 
-        git 'https://github.com/erosons/Docker-jenkins-Demo'
+        git 'https://github.com/erosons/Docker-Jenkins-Demo'
 
       }
 
