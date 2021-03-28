@@ -18,7 +18,7 @@ pipeline {
 
       steps {
 
-        git 'https://github.com/shindesanket/Docker-Jenkins-Demo'
+        git 'https://github.com/erosons/Docker-jenkins-Demo'
 
       }
 
@@ -60,18 +60,14 @@ pipeline {
       steps{
 	  script {
 			sh '''
-
 			a="$(docker container ls --format="{{.ID}}\t{{.Ports}}" | grep "8000" | awk '{print $1}')"
-
 			echo $a
-
 			if [ -z "$a" ]
 			then
 			echo "do not delete"
 			else
 			docker rm -f $a
 			fi
-
 			'''
 		}
       }
